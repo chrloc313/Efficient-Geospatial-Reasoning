@@ -1,0 +1,194 @@
+{
+  "experiment": "Experiment 1: Dense Baseline",
+  "model": "Moondream 2B + LoRA (rank=32)",
+  "adapter_id": "01KEWD218MAE3JP5KJQ488RNVW",
+  "training": {
+    "epochs": 3,
+    "samples_per_epoch": 500,
+    "batch_size": 8,
+    "num_rollouts": 4,
+    "learning_rate": 0.002,
+    "final_step": 188,
+    "history": [
+      {
+        "epoch": 1,
+        "avg_reward": 0.3780062665345735,
+        "steps": 64
+      },
+      {
+        "epoch": 2,
+        "avg_reward": 0.49958826936326367,
+        "steps": 126
+      },
+      {
+        "epoch": 3,
+        "avg_reward": 0.588007216905407,
+        "steps": 188
+      }
+    ]
+  },
+  "results": {
+    "baseline_accuracy": 0.0,
+    "final_accuracy": 0.5477359519912711,
+    "improvement": 0.5477359519912711
+  },
+  "by_question_type": {
+    "Entire_Image_Condition_Recognition": {
+      "accuracy": 0.49878345498783455,
+      "correct": 205,
+      "total": 411
+    },
+    "Road_Condition_Recognition": {
+      "accuracy": 0.5142857142857142,
+      "correct": 252,
+      "total": 490
+    },
+    "Density_Estimation": {
+      "accuracy": 0.5355191256830601,
+      "correct": 98,
+      "total": 183
+    },
+    "Building_Condition_Recognition": {
+      "accuracy": 0.8907103825136612,
+      "correct": 163,
+      "total": 183
+    },
+    "Complex_Counting": {
+      "accuracy": 0.275,
+      "correct": 55,
+      "total": 200
+    },
+    "Risk_Assessment": {
+      "accuracy": 0.9289617486338798,
+      "correct": 170,
+      "total": 183
+    },
+    "Simple_Counting": {
+      "accuracy": 0.3333333333333333,
+      "correct": 61,
+      "total": 183
+    }
+  },
+  "sample_predictions": [
+    {
+      "question": "Is the area mostly non flooded",
+      "predicted": " Yes",
+      "ground_truth": "yes",
+      "correct": true
+    },
+    {
+      "question": "what is the current state of the area?",
+      "predicted": "Destroyed/Flooded)",
+      "ground_truth": "non flooded",
+      "correct": false
+    },
+    {
+      "question": "Is the entire road non flooded?",
+      "predicted": "Yes",
+      "ground_truth": "yes",
+      "correct": true
+    },
+    {
+      "question": "What is the level of density in this image?",
+      "predicted": "High",
+      "ground_truth": "high",
+      "correct": true
+    },
+    {
+      "question": "Is there any non flooded building?",
+      "predicted": "Yes",
+      "ground_truth": "yes",
+      "correct": true
+    },
+    {
+      "question": "What is the condition of road?",
+      "predicted": "Residential",
+      "ground_truth": "non flooded",
+      "correct": false
+    },
+    {
+      "question": "How many non flooded buildings can be seen in this image?",
+      "predicted": "4",
+      "ground_truth": "6",
+      "correct": false
+    },
+    {
+      "question": "Is the area mostly flooded?",
+      "predicted": "No",
+      "ground_truth": "no",
+      "correct": true
+    },
+    {
+      "question": "Do the rescuers need to take immediate actions?",
+      "predicted": "No",
+      "ground_truth": "no",
+      "correct": true
+    },
+    {
+      "question": "How many buildings are in this image?",
+      "predicted": "5",
+      "ground_truth": "6",
+      "correct": false
+    },
+    {
+      "question": "What is the condition of road?",
+      "predicted": "N/A",
+      "ground_truth": "non flooded",
+      "correct": false
+    },
+    {
+      "question": "Is the entire road non flooded?",
+      "predicted": "Yes",
+      "ground_truth": "yes",
+      "correct": true
+    },
+    {
+      "question": "what is the current state of the area?",
+      "predicted": "The area is natural, with trees present)",
+      "ground_truth": "non flooded",
+      "correct": false
+    },
+    {
+      "question": "Is the area mostly non flooded",
+      "predicted": "Yes",
+      "ground_truth": "yes",
+      "correct": true
+    },
+    {
+      "question": "How dense the area is?",
+      "predicted": "Moderate",
+      "ground_truth": "moderate",
+      "correct": true
+    },
+    {
+      "question": "How many buildings are in the image?",
+      "predicted": "4",
+      "ground_truth": "3",
+      "correct": false
+    },
+    {
+      "question": "Is the entire road non flooded?",
+      "predicted": "Yes",
+      "ground_truth": "yes",
+      "correct": true
+    },
+    {
+      "question": "Do the rescuers need to provide help urgently?",
+      "predicted": "No",
+      "ground_truth": "no",
+      "correct": true
+    },
+    {
+      "question": "Is there any flooded building?",
+      "predicted": "No",
+      "ground_truth": "no",
+      "correct": true
+    },
+    {
+      "question": "How many non flooded buildings can be seen in this image?",
+      "predicted": "4",
+      "ground_truth": "3",
+      "correct": false
+    }
+  ]
+}
