@@ -1,0 +1,213 @@
+{
+  "experiment": "Experiment 2: Dense + Geo-CoT",
+  "experiment_id": "dense_geo_cot",
+  "model": "Moondream 2B + LoRA (rank=32)",
+  "training_method": "Supervised Fine-Tuning (Cross-Entropy)",
+  "config": {
+    "experiment_name": "Experiment 2: Dense + Geo-CoT",
+    "experiment_id": "dense_geo_cot",
+    "model_name": "vikhyatk/moondream2",
+    "model_revision": "2024-08-26",
+    "lora_rank": 32,
+    "lora_alpha": 64,
+    "lora_dropout": 0.05,
+    "epochs": 3,
+    "samples_per_epoch": 5800,
+    "batch_size": 2,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "warmup_steps": 50,
+    "max_grad_norm": 1.0,
+    "seed": 42,
+    "max_new_tokens": 256,
+    "use_coordinate_grounding": true,
+    "use_think_tags": true,
+    "total_steps": 8700
+  },
+  "training": {
+    "epochs": 3,
+    "samples_per_epoch": 5800,
+    "batch_size": 2,
+    "learning_rate": 0.0002,
+    "final_step": 8700,
+    "history": [
+      {
+        "epoch": 1,
+        "avg_loss": 0.41472373520706557,
+        "steps": 2900
+      },
+      {
+        "epoch": 2,
+        "avg_loss": 0.3029575772451012,
+        "steps": 5800
+      },
+      {
+        "epoch": 3,
+        "avg_loss": 0.25325590061818665,
+        "steps": 8700
+      }
+    ]
+  },
+  "results": {
+    "final_accuracy": 0.817239498090562
+  },
+  "by_question_type": {
+    "Entire_Image_Condition_Recognition": {
+      "accuracy": 0.9732360097323601,
+      "correct": 400,
+      "total": 411
+    },
+    "Road_Condition_Recognition": {
+      "accuracy": 0.9693877551020408,
+      "correct": 475,
+      "total": 490
+    },
+    "Density_Estimation": {
+      "accuracy": 0.7759562841530054,
+      "correct": 142,
+      "total": 183
+    },
+    "Building_Condition_Recognition": {
+      "accuracy": 0.9398907103825137,
+      "correct": 172,
+      "total": 183
+    },
+    "Complex_Counting": {
+      "accuracy": 0.325,
+      "correct": 65,
+      "total": 200
+    },
+    "Risk_Assessment": {
+      "accuracy": 0.9617486338797814,
+      "correct": 176,
+      "total": 183
+    },
+    "Simple_Counting": {
+      "accuracy": 0.37158469945355194,
+      "correct": 68,
+      "total": 183
+    }
+  },
+  "sample_predictions": [
+    {
+      "question": "Is the area mostly non flooded",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis) Therefore, yes\n</think>\n<answer>no</answer>",
+      "ground_truth": "yes",
+      "correct": false
+    },
+    {
+      "question": "what is the current state of the area?",
+      "predicted": "\n\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis)\n</think>\n<answer>non flooded</answer>",
+      "ground_truth": "non flooded",
+      "correct": true
+    },
+    {
+      "question": "Is the entire road non flooded?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis) Therefore, yes\n</think>\n<answer>yes</answer>",
+      "ground_truth": "yes",
+      "correct": true
+    },
+    {
+      "question": "What is the level of density in this image?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis)\n</think>\n<answer>high</answer>",
+      "ground_truth": "high",
+      "correct": true
+    },
+    {
+      "question": "Is there any non flooded building?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis) Therefore, yes\n</think>\n<answer>yes</answer>",
+      "ground_truth": "yes",
+      "correct": true
+    },
+    {
+      "question": "What is the condition of road?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis)\n</think>\n<answer>non flooded</answer>",
+      "ground_truth": "non flooded",
+      "correct": true
+    },
+    {
+      "question": "How many non flooded buildings can be seen in this image?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis)\n</think>\n<answer>4</answer>",
+      "ground_truth": "6",
+      "correct": false
+    },
+    {
+      "question": "Is the area mostly flooded?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis) Therefore, no\n</think>\n<answer>no</answer>",
+      "ground_truth": "no",
+      "correct": true
+    },
+    {
+      "question": "Do the rescuers need to take immediate actions?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis) Therefore, no\n</think>\n<answer>no</answer>",
+      "ground_truth": "no",
+      "correct": true
+    },
+    {
+      "question": "How many buildings are in this image?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis)\n</think>\n<answer>5</answer>",
+      "ground_truth": "6",
+      "correct": false
+    },
+    {
+      "question": "What is the condition of road?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis) Therefore, ** dry\n</think>\n<answer>non flooded</answer>",
+      "ground_truth": "non flooded",
+      "correct": true
+    },
+    {
+      "question": "Is the entire road non flooded?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis) Therefore, yes\n</think>\n<answer>yes</answer>",
+      "ground_truth": "yes",
+      "correct": true
+    },
+    {
+      "question": "what is the current state of the area?",
+      "predicted": "\n\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis) Therefore, no\n</think>\n<answer>non flooded</answer>",
+      "ground_truth": "non flooded",
+      "correct": true
+    },
+    {
+      "question": "Is the area mostly non flooded",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis) Therefore, yes\n</think>\n<answer>yes</answer>",
+      "ground_truth": "yes",
+      "correct": true
+    },
+    {
+      "question": "How dense the area is?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis)\n</think>\n<answer>moderate</answer>",
+      "ground_truth": "moderate",
+      "correct": true
+    },
+    {
+      "question": "How many buildings are in the image?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis)\n</think>\n<answer>4</answer>",
+      "ground_truth": "3",
+      "correct": false
+    },
+    {
+      "question": "Is the entire road non flooded?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis) Therefore, yes\n</think>\n<answer>yes</answer>",
+      "ground_truth": "yes",
+      "correct": true
+    },
+    {
+      "question": "Do the rescuers need to provide help urgently?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis) Therefore, no\n</think>\n<answer>no</answer>",
+      "ground_truth": "no",
+      "correct": true
+    },
+    {
+      "question": "Is there any flooded building?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis) Therefore, no\n</think>\n<answer>no</answer>",
+      "ground_truth": "no",
+      "correct": true
+    },
+    {
+      "question": "How many non flooded buildings can be seen in this image?",
+      "predicted": "\n<think>\n(Planning)\n\n(Grounding)\n\n(Synthesis)\n</think>\n<answer>4</answer>",
+      "ground_truth": "3",
+      "correct": false
+    }
+  ]
+}
