@@ -11,80 +11,85 @@
     "lora_rank": 32,
     "lora_alpha": 64,
     "lora_dropout": 0.05,
-    "epochs": 3,
-    "samples_per_epoch": 500,
-    "batch_size": 2,
+    "epochs": 4,
+    "samples_per_epoch": 5800,
+    "batch_size": 8,
     "learning_rate": 0.0002,
     "weight_decay": 0.01,
     "warmup_steps": 50,
     "max_grad_norm": 1.0,
     "seed": 42,
-    "max_new_tokens": 32,
-    "total_steps": 750
+    "max_new_tokens": 512,
+    "total_steps": 2900
   },
   "training": {
-    "epochs": 3,
-    "samples_per_epoch": 500,
-    "batch_size": 2,
+    "epochs": 4,
+    "samples_per_epoch": 5800,
+    "batch_size": 8,
     "learning_rate": 0.0002,
-    "final_step": 750,
+    "final_step": 2900,
     "history": [
       {
         "epoch": 1,
-        "avg_loss": 2.2071273531708577,
-        "steps": 250
+        "avg_loss": 0.9377170368044734,
+        "steps": 725
       },
       {
         "epoch": 2,
-        "avg_loss": 0.6289768711488869,
-        "steps": 500
+        "avg_loss": 0.42711012068039994,
+        "steps": 1450
       },
       {
         "epoch": 3,
-        "avg_loss": 0.7889501900628384,
-        "steps": 750
+        "avg_loss": 0.34904104052646917,
+        "steps": 2175
+      },
+      {
+        "epoch": 4,
+        "avg_loss": 0.27046679336864177,
+        "steps": 2900
       }
     ]
   },
   "results": {
-    "baseline_accuracy": 0.447354064375341,
-    "final_accuracy": 0.7741407528641571,
-    "improvement": 0.3267866884888161
+    "baseline_accuracy": 0.4533551554828151,
+    "final_accuracy": 0.8374249863611566,
+    "improvement": 0.3840698308783415
   },
   "by_question_type": {
     "Entire_Image_Condition_Recognition": {
-      "accuracy": 0.9586374695863747,
-      "correct": 394,
+      "accuracy": 0.9854014598540146,
+      "correct": 405,
       "total": 411
     },
     "Road_Condition_Recognition": {
-      "accuracy": 0.9346938775510204,
-      "correct": 458,
+      "accuracy": 0.9775510204081632,
+      "correct": 479,
       "total": 490
     },
     "Density_Estimation": {
-      "accuracy": 0.6885245901639344,
-      "correct": 126,
+      "accuracy": 0.7978142076502732,
+      "correct": 146,
       "total": 183
     },
     "Building_Condition_Recognition": {
-      "accuracy": 0.9398907103825137,
-      "correct": 172,
+      "accuracy": 0.9562841530054644,
+      "correct": 175,
       "total": 183
     },
     "Complex_Counting": {
-      "accuracy": 0.245,
-      "correct": 49,
+      "accuracy": 0.385,
+      "correct": 77,
       "total": 200
     },
     "Risk_Assessment": {
-      "accuracy": 0.9453551912568307,
-      "correct": 173,
+      "accuracy": 0.9562841530054644,
+      "correct": 175,
       "total": 183
     },
     "Simple_Counting": {
-      "accuracy": 0.2568306010928962,
-      "correct": 47,
+      "accuracy": 0.4262295081967213,
+      "correct": 78,
       "total": 183
     }
   },
@@ -97,7 +102,7 @@
     },
     {
       "question": "what is the current state of the area?",
-      "predicted": "non flooded",
+      "predicted": "non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded",
       "ground_truth": "non flooded",
       "correct": true
     },
@@ -121,7 +126,7 @@
     },
     {
       "question": "What is the condition of road?",
-      "predicted": "non flooded",
+      "predicted": "non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded",
       "ground_truth": "non flooded",
       "correct": true
     },
@@ -151,7 +156,7 @@
     },
     {
       "question": "What is the condition of road?",
-      "predicted": "non flooded",
+      "predicted": "non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded, non flooded",
       "ground_truth": "non flooded",
       "correct": true
     },
@@ -163,7 +168,7 @@
     },
     {
       "question": "what is the current state of the area?",
-      "predicted": "non flooded",
+      "predicted": "non flooded, non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non flooded non",
       "ground_truth": "non flooded",
       "correct": true
     },
@@ -175,9 +180,9 @@
     },
     {
       "question": "How dense the area is?",
-      "predicted": "high",
+      "predicted": "moderate",
       "ground_truth": "moderate",
-      "correct": false
+      "correct": true
     },
     {
       "question": "How many buildings are in the image?",
@@ -199,7 +204,7 @@
     },
     {
       "question": "Is there any flooded building?",
-      "predicted": "no",
+      "predicted": "no no",
       "ground_truth": "no",
       "correct": true
     },
